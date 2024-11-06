@@ -1,12 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors'); // Importa CORS
+const cors = require('cors'); 
 const db = require('./database');
 
 const app = express();
 const PORT = 3002;
 
-app.use(cors()); // Habilita CORS para todas las rutas
+app.use(cors()); 
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {

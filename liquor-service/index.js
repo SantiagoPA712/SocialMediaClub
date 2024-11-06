@@ -1,19 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors'); // Importa CORS
+const cors = require('cors'); 
 const pool = require('./database');
 
 const app = express();
 const PORT = 3001;
 
-app.use(cors()); // Habilita CORS para todas las rutas
+app.use(cors()); 
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
   res.send('Welcome to the Liquor Service API');
 });
 
-// Rutas CRUD para la tabla orders
+
 app.get('/orders', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM orders');

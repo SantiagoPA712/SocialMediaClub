@@ -34,7 +34,7 @@ function LiquorComponent() {
   const handleAddOrder = async () => {
     try {
       await addOrder(newOrder);
-      fetchOrders(); // Refresh orders list
+      fetchOrders(); 
       setNewOrder({
         LiquorType: '',
         Quantity: 1,
